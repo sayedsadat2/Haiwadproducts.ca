@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Hawiad Products Canada | Premium Green Tea & Ginseng</title>
+    <meta name="description" content="Hawiad Products Canada - Premium Green Tea and Halal Ginseng Energy drinks. Wholesale, retail, distribution across Canada." />
+    <meta property="og:title" content="Hawiad Products Canada" />
+    <meta property="og:description" content="Premium Green Tea & Ginseng Energy – Imported, Halal Certified." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.haiwadcanada.ca" />
+    <meta property="og:image" content="https://www.haiwad.com/wp-content/uploads/2021/05/Cup-of-tea.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== MASTER STYLES (same as before, with updated logo) ===== */
+        :root {
+            --primary: #003d55;
+            --primary-light: #0b6c93;
+            --primary-dark: #002a3b;
+            --secondary: #c89d3c;
+            --secondary-light: #e8c84a;
+            --accent: #f4c542;
+            --gold: #d4a837;
+            --white: #ffffff;
+            --off-white: #f8fafc;
+            --light-gray: #eef2f6;
+            --medium-gray: #94a3b8;
+            --dark: #0f1a24;
+            --text: #1e293b;
+            --success: #10b981;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 50px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --radius: 16px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--off-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: var(--primary); transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--off-white); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 0.6rem; padding: 0.85rem 2rem; border-radius: 50px;
+            font-weight: 600; font-size: 1rem; border: none; cursor: pointer;
+            transition: var(--transition); text-align: center; letter-spacing: 0.3px;
+            position: relative; overflow: hidden;
+        }
+        .btn::after {
+            content: ''; position: absolute; top: 50%; left: 50%;
+            width: 0; height: 0; border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .btn:active::after { width: 300px; height: 300px; }
+        .btn-primary { background: var(--primary); color: var(--white); box-shadow: 0 4px 15px rgba(0,61,85,0.3); }
+        .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,61,85,0.4); color: var(--white); }
+        .btn-secondary { background: var(--secondary); color: var(--white); box-shadow: 0 4px 15px rgba(200,157,60,0.3); }
+        .btn-secondary:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,157,60,0.4); color: var(--white); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); transform: translateY(-2px); }
+        .btn-gold { background: linear-gradient(135deg, var(--secondary), var(--gold)); color: var(--white); box-shadow: 0 4px 20px rgba(200,157,60,0.35); }
+        .btn-gold:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 35px rgba(200,157,60,0.5); color: var(--white); }
+        .btn-large { padding: 1.1rem 3rem; font-size: 1.1rem; }
+        .btn-block { width: 100%; justify-content: center; }
+        .btn-phone { background: var(--success); color: var(--white); animation: pulse-phone 2s infinite; }
+        .btn-phone:hover { background: #059669; color: var(--white); transform: scale(1.05); }
+        @keyframes pulse-phone {
+            0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(16,185,129,0); }
+            100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); }
+        }
+
+        /* TOP URGENT BAR */
+        .top-urgent-bar {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white); padding: 0.5rem 0; font-size: 0.85rem;
+            position: sticky; top: 0; z-index: 999;
+            border-bottom: 2px solid var(--secondary);
+        }
+        .top-urgent-bar .container {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 0.5rem;
+        }
+        .top-urgent-bar .left { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+        .top-urgent-bar .left span { display: flex; align-items: center; gap: 0.4rem; }
+        .top-urgent-bar .left i { color: var(--secondary); }
+        .top-urgent-bar .right { display: flex; align-items: center; gap: 1rem; }
+        .top-urgent-bar .right a {
+            color: var(--white); font-weight: 600;
+            display: flex; align-items: center; gap: 0.4rem;
+            padding: 0.3rem 1rem; border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            transition: var(--transition);
+        }
+        .top-urgent-bar .right a:hover { background: rgba(255,255,255,0.2); transform: scale(1.05); }
+        .top-urgent-bar .right .phone-number { font-size: 1.1rem; font-weight: 700; color: var(--secondary-light); }
+        @media (max-width:768px) {
+            .top-urgent-bar .container { flex-direction: column; text-align: center; padding: 0.3rem 1rem; }
+            .top-urgent-bar .left { justify-content: center; gap: 0.8rem; font-size: 0.75rem; }
+            .top-urgent-bar .right .phone-number { font-size: 0.9rem; }
+        }
+
+        /* HEADER */
+        .site-header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky; top: 0; z-index: 100;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .site-header .container {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 1rem;
+        }
+
+        /* ===== NEW CUSTOM LOGO: Tea Cup with Vapour ===== */
+        .logo a {
+            display: flex; align-items: center; gap: 0.8rem;
+        }
+        .logo-svg {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .logo-text .logo-sub {
+            font-weight: 400;
+            font-size: 0.7rem;
+            display: block;
+            color: var(--medium-gray);
+            letter-spacing: 0.5px;
+            margin-top: -2px;
+        }
+        .logo-text .logo-sub i {
+            color: var(--secondary);
+            margin-right: 2px;
+        }
+
+        /* NAV */
+        .main-nav ul {
+            display: flex; list-style: none; gap: 2rem; align-items: center;
+        }
+        .main-nav a {
+            color: var(--text); font-weight: 500; font-size: 0.95rem;
+            padding: 0.4rem 0; border-bottom: 3px solid transparent;
+            transition: var(--transition); cursor: pointer;
+            position: relative;
+        }
+        .main-nav a::after {
+            content: ''; position: absolute; bottom: -3px; left: 0;
+            width: 0; height: 3px; background: var(--secondary);
+            transition: var(--transition);
+        }
+        .main-nav a:hover::after,
+        .main-nav a.active::after { width: 100%; }
+        .main-nav a:hover { color: var(--primary); }
+        .main-nav a.active { color: var(--primary); font-weight: 700; }
+        .nav-cta .btn { padding: 0.5rem 1.5rem; font-size: 0.85rem; }
+        @media (max-width:768px) {
+            .site-header .container { flex-direction: column; align-items: center; }
+            .main-nav ul { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+            .main-nav a { font-size: 0.85rem; }
+            .nav-cta .btn { padding: 0.4rem 1rem; font-size: 0.75rem; }
+            .logo-text { font-size: 1.2rem; }
+            .logo-svg { width: 40px; height: 40px; }
+        }
+
+        /* FLOATING CONTACT BAR */
+        .floating-contact-bar {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 -4px 30px rgba(0,0,0,0.1);
+            padding: 0.75rem 1rem;
+            z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 0.5rem;
+            border-top: 3px solid var(--secondary);
+        }
+        .floating-contact-bar .contact-item {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.85rem; color: var(--text);
+        }
+        .floating-contact-bar .contact-item i { color: var(--secondary); font-size: 1.1rem; }
+        .floating-contact-bar .contact-item a { color: var(--primary); font-weight: 600; }
+        .floating-contact-bar .contact-item a:hover { color: var(--secondary); }
+        .floating-contact-bar .btn { padding: 0.5rem 1.5rem; font-size: 0.85rem; }
+        @media (max-width:768px) {
+            .floating-contact-bar { padding: 0.5rem 0.75rem; gap: 0.3rem; }
+            .floating-contact-bar .contact-item { font-size: 0.7rem; }
+            .floating-contact-bar .btn { padding: 0.4rem 1rem; font-size: 0.75rem; }
+            .floating-contact-bar .hide-mobile { display: none; }
+        }
+
+        /* PAGE SYSTEM */
+        .page { display: none; animation: fadeInUp 0.5s ease; }
+        .page.active { display: block; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* HERO */
+        .hero {
+            position: relative; padding: 5rem 0 6rem;
+            background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: var(--white); overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 60%; height: 200%;
+            background: radial-gradient(ellipse, rgba(200,157,60,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+            height: 100px; background: linear-gradient(to top, var(--off-white), transparent);
+            pointer-events: none;
+        }
+        .hero-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            align-items: center; gap: 4rem; position: relative; z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(255,255,255,0.12); padding: 0.4rem 1.2rem;
+            border-radius: 50px; font-size: 0.8rem; font-weight: 600;
+            letter-spacing: 0.5px; text-transform: uppercase;
+            backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .hero-badge i { color: var(--secondary); }
+        .hero-content h1 {
+            font-size: 3.8rem; font-weight: 900; line-height: 1.1;
+            margin-bottom: 1.5rem; letter-spacing: -1px;
+        }
+        .hero-content h1 .highlight {
+            background: linear-gradient(135deg, var(--secondary-light), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-content p { font-size: 1.2rem; opacity: 0.9; max-width: 520px; margin-bottom: 2rem; line-height: 1.8; }
+        .hero-features {
+            display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin-bottom: 2.5rem;
+        }
+        .hero-features span {
+            display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.95rem; background: rgba(255,255,255,0.06);
+            padding: 0.3rem 1rem; border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .hero-features i { color: var(--secondary); font-size: 1rem; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+        .hero-image { display: flex; justify-content: center; align-items: center; position: relative; }
+        .hero-image .floating-badge {
+            position: absolute; background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px); padding: 0.8rem 1.2rem;
+            border-radius: var(--radius); box-shadow: var(--shadow-lg);
+            color: var(--text); font-weight: 600; font-size: 0.85rem;
+            animation: float-badge 4s ease-in-out infinite;
+        }
+        .hero-image .floating-badge.top-right { top: 10%; right: -5%; animation-delay: 0.5s; }
+        .hero-image .floating-badge.bottom-left { bottom: 15%; left: -5%; animation-delay: 1s; }
+        .hero-image .floating-badge i { color: var(--secondary); margin-right: 0.3rem; }
+        @keyframes float-badge {
+            0%,100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .hero-image img {
+            max-width: 450px; filter: drop-shadow(0 20px 60px rgba(0,0,0,0.3));
+            animation: float-hero 6s ease-in-out infinite;
+        }
+        @keyframes float-hero { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        @media (max-width:1024px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .hero-content p { max-width: 100%; margin-left: auto; margin-right: auto; }
+            .hero-features { justify-content: center; }
+            .hero-actions { justify-content: center; }
+            .hero-image img { max-width: 300px; }
+            .hero-image .floating-badge { display: none; }
+            .hero-content h1 { font-size: 2.8rem; }
+        }
+        @media (max-width:480px) {
+            .hero { padding: 3rem 0 4rem; }
+            .hero-content h1 { font-size: 2rem; }
+            .hero-features span { font-size: 0.8rem; padding: 0.2rem 0.8rem; }
+        }
+
+        /* TRUST BANNER */
+        .trust-banner { background: var(--white); padding: 2.5rem 0; border-bottom: 1px solid var(--light-gray); }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 2rem; text-align: center; }
+        .trust-item { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+        .trust-item i { font-size: 2rem; color: var(--secondary); }
+        .trust-item span { font-weight: 600; color: var(--dark); font-size: 0.9rem; }
+        .trust-item small { color: var(--medium-gray); font-size: 0.8rem; }
+
+        /* Video Section */
+        .video-section { background: var(--white); }
+        .video-wrapper { max-width: 800px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); }
+        .video-wrapper video { width: 100%; display: block; }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 2.5rem; }
+        .product-card {
+            background: var(--white); border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow-md); transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+        .product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: var(--secondary); }
+        .product-card .product-img {
+            padding: 2rem 2rem 0; display: flex; justify-content: center;
+            background: linear-gradient(135deg, #f8fafc, #eef2f6);
+            position: relative;
+        }
+        .product-card .product-img .badge-sale {
+            position: absolute; top: 1rem; right: 1rem;
+            background: var(--danger); color: var(--white);
+            padding: 0.2rem 0.8rem; border-radius: 50px;
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+        }
+        .product-card .product-img img { max-height: 200px; object-fit: contain; }
+        .product-card .product-info { padding: 1.8rem; }
+        .product-card .product-info h3 { color: var(--primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .product-card .product-info .product-desc { color: var(--medium-gray); font-size: 0.95rem; margin-bottom: 1rem; }
+        .product-card .product-info ul { list-style: none; margin-bottom: 1.5rem; }
+        .product-card .product-info ul li {
+            display: flex; align-items: center; gap: 0.6rem;
+            font-size: 0.9rem; color: var(--text); padding: 0.2rem 0;
+        }
+        .product-card .product-info ul li i { color: var(--secondary); }
+
+        /* Vision/Mission */
+        .vision-mission { background: var(--white); }
+        .vm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2.5rem; }
+        .vm-card {
+            text-align: center; padding: 2.5rem 2rem; border-radius: var(--radius);
+            background: var(--off-white); transition: var(--transition);
+            border: 1px solid transparent;
+        }
+        .vm-card:hover { background: var(--white); border-color: var(--secondary); box-shadow: var(--shadow-md); transform: translateY(-4px); }
+        .vm-card .vm-icon {
+            font-size: 3rem; color: var(--secondary); margin-bottom: 1rem;
+            display: inline-block; padding: 1rem; background: rgba(200,157,60,0.1); border-radius: 50%;
+        }
+        .vm-card h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 0.8rem; }
+        .vm-card p { color: var(--text); font-size: 0.95rem; }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+        }
+        .testimonials .section-header h2 { color: var(--white); }
+        .testimonials .section-header p { color: rgba(255,255,255,0.7); }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+        .testimonial-card {
+            background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
+            padding: 2rem; border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+        .testimonial-card .stars { color: var(--secondary); margin-bottom: 1rem; font-size: 1.1rem; }
+        .testimonial-card blockquote { font-size: 1rem; line-height: 1.8; opacity: 0.9; margin-bottom: 1rem; font-style: italic; }
+        .testimonial-card .author { display: flex; align-items: center; gap: 0.8rem; }
+        .testimonial-card .author .avatar {
+            width: 50px; height: 50px; border-radius: 50%;
+            background: var(--secondary); display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1.2rem; color: var(--white);
+        }
+        .testimonial-card .author .info { font-size: 0.9rem; }
+        .testimonial-card .author .info .name { font-weight: 600; }
+        .testimonial-card .author .info .role { opacity: 0.7; font-size: 0.8rem; }
+
+        /* Section common */
+        .section { padding: 5rem 0; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 3rem; }
+        .section-header .badge {
+            display: inline-block; background: var(--primary); color: var(--white);
+            padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.75rem;
+            font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .section-header h2 {
+            font-size: 2.8rem; font-weight: 800; color: var(--dark);
+            line-height: 1.2; margin-bottom: 0.75rem;
+        }
+        .section-header h2 .highlight {
+            background: linear-gradient(135deg, var(--secondary), var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-header p { font-size: 1.15rem; color: var(--medium-gray); max-width: 550px; margin: 0 auto; }
+
+        /* Page Hero (inner) */
+        .page-hero {
+            padding: 4rem 0; text-align: center;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white); position: relative; overflow: hidden;
+        }
+        .page-hero::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+            height: 60px; background: linear-gradient(to top, var(--off-white), transparent);
+            pointer-events: none;
+        }
+        .page-hero h1 { font-size: 3.2rem; font-weight: 900; }
+        .page-hero h1 .highlight {
+            background: linear-gradient(135deg, var(--secondary-light), var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-hero p { font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem; }
+
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text h2 { font-size: 2.2rem; color: var(--primary); font-weight: 800; margin-bottom: 1rem; }
+        .about-text p { color: var(--text); margin-bottom: 1rem; font-size: 1.05rem; }
+        .about-text .styled-list { list-style: none; margin-top: 1.5rem; }
+        .about-text .styled-list li { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.6rem; font-size: 1rem; }
+        .about-text .styled-list li i { color: var(--secondary); font-size: 1.2rem; }
+        .about-image { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
+        .about-image img { max-width: 300px; border-radius: var(--radius); }
+        @media (max-width:1024px) {
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-text .styled-list li { justify-content: center; }
+        }
+
+        /* Products detail */
+        .product-detail-card {
+            display: grid; grid-template-columns: 1fr 1.5fr;
+            gap: 3rem; align-items: center;
+            background: var(--white); padding: 2.5rem;
+            border-radius: var(--radius); box-shadow: var(--shadow-md);
+            border: 1px solid var(--light-gray);
+            transition: var(--transition);
+        }
+        .product-detail-card:hover { box-shadow: var(--shadow-lg); border-color: var(--secondary); }
+        .product-detail-card:not(:last-child) { margin-bottom: 3rem; }
+        .section-divider { border: 0; height: 2px; background: linear-gradient(to right, transparent, var(--secondary), transparent); margin: 3rem 0; }
+        .product-detail-img {
+            display: flex; justify-content: center; align-items: center;
+            background: linear-gradient(135deg, #f8fafc, #eef2f6);
+            padding: 2rem; border-radius: var(--radius);
+        }
+        .product-detail-img img { max-height: 300px; object-fit: contain; }
+        .product-detail-info h2 { font-size: 2rem; color: var(--primary); font-weight: 800; margin-bottom: 0.3rem; }
+        .product-detail-info .product-origin {
+            display: inline-block; background: rgba(200,157,60,0.15);
+            color: var(--secondary); padding: 0.2rem 1.2rem;
+            border-radius: 50px; font-size: 0.85rem; font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .product-detail-info p { color: var(--text); margin-bottom: 1.5rem; }
+        .product-detail-info .product-specs h4,
+        .product-detail-info .product-benefits h4 {
+            color: var(--primary); margin-bottom: 0.5rem; font-weight: 700;
+        }
+        .product-detail-info .product-specs ul,
+        .product-detail-info .product-benefits ul {
+            list-style: none; margin-bottom: 1.5rem;
+        }
+        .product-detail-info .product-specs ul li,
+        .product-detail-info .product-benefits ul li {
+            display: flex; align-items: center; gap: 0.6rem;
+            margin-bottom: 0.4rem; font-size: 0.95rem;
+        }
+        .product-detail-info .product-benefits ul li i { color: var(--secondary); }
+        @media (max-width:1024px) {
+            .product-detail-card { grid-template-columns: 1fr; }
+            .product-detail-img { order: -1; }
+        }
+
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; }
+        .contact-info h2 { color: var(--primary); font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+        .contact-info p { color: var(--text); margin-bottom: 2rem; }
+        .contact-details { margin-bottom: 2rem; }
+        .contact-item {
+            display: flex; align-items: flex-start; gap: 1rem;
+            margin-bottom: 1.5rem; padding: 1rem;
+            border-radius: var(--radius-sm); transition: var(--transition);
+            background: var(--white); border: 1px solid var(--light-gray);
+        }
+        .contact-item:hover { border-color: var(--secondary); box-shadow: var(--shadow-sm); }
+        .contact-item i { font-size: 1.4rem; color: var(--secondary); width: 28px; text-align: center; margin-top: 2px; }
+        .contact-item h4 { font-size: 0.95rem; color: var(--dark); font-weight: 700; }
+        .contact-item p { margin-bottom: 0; color: var(--medium-gray); }
+        .contact-form-wrapper {
+            background: var(--white); padding: 2.5rem;
+            border-radius: var(--radius); box-shadow: var(--shadow-md);
+            border: 1px solid var(--light-gray);
+        }
+        .contact-form-wrapper h2 { color: var(--primary); font-weight: 800; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; color: var(--dark); margin-bottom: 0.3rem; font-size: 0.9rem; }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 0.8rem 1.2rem;
+            border: 2px solid var(--light-gray); border-radius: var(--radius-sm);
+            font-size: 1rem; transition: var(--transition);
+            background: var(--white); font-family: inherit;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none; border-color: var(--secondary);
+            box-shadow: 0 0 0 4px rgba(200,157,60,0.1);
+        }
+        .form-group .hint { font-size: 0.8rem; color: var(--medium-gray); margin-top: 0.2rem; }
+        @media (max-width:1024px) { .contact-grid { grid-template-columns: 1fr; } }
+        @media (max-width:480px) { .contact-form-wrapper { padding: 1.5rem; } }
+
+        /* Footer */
+        .site-footer {
+            background: var(--dark); color: rgba(255,255,255,0.8);
+            padding: 4rem 0 1.5rem; border-top: 4px solid var(--secondary);
+        }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 3rem; margin-bottom: 2.5rem;
+        }
+        .footer-about h4, .footer-links h4, .footer-contact h4 {
+            color: var(--white); margin-bottom: 1rem; font-size: 1.1rem; font-weight: 700;
+        }
+        .footer-about p { font-size: 0.95rem; line-height: 1.8; opacity: 0.8; margin-bottom: 1.2rem; }
+        .footer-about .social-links { display: flex; gap: 0.8rem; }
+        .footer-about .social-links a {
+            display: flex; align-items: center; justify-content: center;
+            width: 42px; height: 42px; border-radius: 50%;
+            background: rgba(255,255,255,0.06); color: var(--white);
+            transition: var(--transition); font-size: 1.1rem;
+        }
+        .footer-about .social-links a:hover { background: var(--secondary); transform: translateY(-3px); }
+        .footer-links ul { list-style: none; }
+        .footer-links ul li { margin-bottom: 0.6rem; }
+        .footer-links ul li a {
+            color: rgba(255,255,255,0.7); transition: var(--transition);
+            cursor: pointer; font-size: 0.95rem;
+        }
+        .footer-links ul li a:hover { color: var(--secondary); padding-left: 0.3rem; }
+        .footer-contact p {
+            display: flex; align-items: center; gap: 0.8rem;
+            font-size: 0.95rem; opacity: 0.8; margin-bottom: 0.6rem;
+        }
+        .footer-contact p i { color: var(--secondary); width: 20px; text-align: center; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 1.5rem; text-align: center;
+            font-size: 0.85rem; opacity: 0.6;
+        }
+        .footer-bottom a { color: var(--secondary); font-weight: 600; }
+        @media (max-width:1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width:768px) {
+            .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .footer-about .social-links { justify-content: center; }
+            .footer-contact p { justify-content: center; }
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed; bottom: 90px; right: 20px;
+            width: 50px; height: 50px;
+            background: var(--primary); color: var(--white);
+            border: none; border-radius: 50%; font-size: 1.2rem;
+            cursor: pointer; box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            opacity: 0; visibility: hidden;
+            z-index: 900;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { background: var(--secondary); transform: translateY(-4px) scale(1.05); }
+        @media (max-width:768px) {
+            .back-to-top { bottom: 75px; right: 10px; width: 40px; height: 40px; font-size: 1rem; }
+        }
+
+        /* Exit popup */
+        .exit-popup-overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+            z-index: 9999; display: none;
+            align-items: center; justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .exit-popup-overlay.active { display: flex; }
+        .exit-popup {
+            background: var(--white); max-width: 500px; width: 90%;
+            padding: 3rem; border-radius: var(--radius);
+            text-align: center; position: relative;
+            box-shadow: var(--shadow-xl);
+            animation: slideUp 0.4s ease;
+        }
+        .exit-popup .close-popup {
+            position: absolute; top: 1rem; right: 1rem;
+            background: none; border: none; font-size: 1.5rem;
+            color: var(--medium-gray); cursor: pointer;
+            transition: var(--transition);
+        }
+        .exit-popup .close-popup:hover { color: var(--dark); transform: rotate(90deg); }
+        .exit-popup .popup-icon { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; }
+        .exit-popup h3 { font-size: 1.5rem; font-weight: 800; color: var(--dark); margin-bottom: 0.5rem; }
+        .exit-popup p { color: var(--medium-gray); margin-bottom: 1.5rem; }
+        .exit-popup .btn { width: 100%; }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive fine-tuning */
+        @media (max-width:480px) {
+            .section { padding: 3rem 0; }
+            .section-header h2 { font-size: 2rem; }
+            .page-hero h1 { font-size: 2.2rem; }
+            .btn-large { padding: 0.8rem 1.8rem; font-size: 0.95rem; }
+            .product-detail-card { padding: 1.5rem; }
+        }
+        @media print {
+            .floating-contact-bar, .top-urgent-bar, .back-to-top, .exit-popup-overlay { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== TOP URGENT BAR ===== -->
+<div class="top-urgent-bar">
+    <div class="container">
+        <div class="left">
+            <span><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM EST</span>
+            <span><i class="fas fa-truck"></i> Fast Shipping Across Canada</span>
+        </div>
+        <div class="right">
+            <a href="tel:+16476193385">
+                <i class="fas fa-phone-alt"></i>
+                <span class="phone-number">+1 (647) 619-3385</span>
+            </a>
+            <a href="mailto:Haiwadproductscanada@gmail.com">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ===== HEADER with NEW Tea Cup Logo ===== -->
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <a href="#" onclick="showPage('home')">
+                <!-- NEW SVG LOGO: Tea Cup with Vapour -->
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background circle -->
+                    <circle cx="50" cy="50" r="45" fill="#003d55" />
+                    
+                    <!-- Cup body -->
+                    <path d="M28 42 L72 42 L66 72 L34 72 Z" fill="#ffffff" />
+                    <!-- Cup rim (gold) -->
+                    <ellipse cx="50" cy="42" rx="22" ry="7" fill="#c89d3c" />
+                    <!-- Handle -->
+                    <path d="M72 50 C84 50, 84 64, 72 64" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+                    <!-- Tea inside (brownish) -->
+                    <ellipse cx="50" cy="44" rx="18" ry="5" fill="#8B4513" opacity="0.5" />
+                    
+                    <!-- Steam / Vapour (wavy lines) -->
+                    <path d="M38 32 Q44 22 38 12" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2.5" stroke-linecap="round" />
+                    <path d="M50 28 Q56 16 50 8" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2.5" stroke-linecap="round" />
+                    <path d="M62 32 Q68 22 62 12" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2.5" stroke-linecap="round" />
+                    
+                    <!-- Text: "Haiwad" on the cup, "Tea" below -->
+                    <text x="50" y="60" font-family="Inter, sans-serif" font-size="10" font-weight="800" fill="#003d55" text-anchor="middle">Haiwad</text>
+                    <text x="50" y="70" font-family="Inter, sans-serif" font-size="6.5" font-weight="700" fill="#c89d3c" text-anchor="middle">Tea</text>
+                </svg>
+                <span class="logo-text">
+                    Hawiad
+                    <span class="logo-sub"><i class="fas fa-maple-leaf"></i> Products Canada</span>
+                </span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a class="active" onclick="showPage('home')" data-page="home">Home</a></li>
+                <li><a onclick="showPage('about')" data-page="about">About</a></li>
+                <li><a onclick="showPage('products')" data-page="products">Products</a></li>
+                <li><a onclick="showPage('contact')" data-page="contact">Contact</a></li>
+                <li class="nav-cta">
+                    <a href="tel:+16476193385" class="btn btn-secondary" style="padding:0.4rem 1.2rem; font-size:0.85rem;">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main>
+
+    <!-- HOME PAGE -->
+    <div id="page-home" class="page active">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge"><i class="fas fa-certificate"></i> Halal · Pure · Natural · Premium</div>
+                    <h1>Discover the <span class="highlight">Authentic Taste</span> of Vietnam</h1>
+                    <p>Hawiad Green Tea is your daily source of refreshment, stamina, and essential vitamins. Sourced from the finest tea gardens and crafted with care.</p>
+                    <div class="hero-features">
+                        <span><i class="fas fa-check-circle"></i> Rich in Vitamins B2, B3, B5, B6 & B12</span>
+                        <span><i class="fas fa-check-circle"></i> Special Tasting Flavor</span>
+                        <span><i class="fas fa-check-circle"></i> Best When Chilled</span>
+                        <span><i class="fas fa-check-circle"></i> Halal Certified</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="#" onclick="showPage('products')" class="btn btn-gold btn-large">
+                            <i class="fas fa-shopping-bag"></i> Explore Products
+                        </a>
+                        <a href="tel:+16476193385" class="btn btn-outline btn-large">
+                            <i class="fas fa-phone-alt"></i> Call for Wholesale
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://www.haiwad.com/wp-content/uploads/2021/05/Cup-of-tea.png" alt="Hawiad Premium Green Tea" />
+                    <div class="floating-badge top-right"><i class="fas fa-star"></i> Premium Quality</div>
+                    <div class="floating-badge bottom-left"><i class="fas fa-leaf"></i> 100% Pure</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Banner -->
+        <section class="trust-banner">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item"><i class="fas fa-award"></i><span>Premium Quality</span><small>Imported from Vietnam</small></div>
+                    <div class="trust-item"><i class="fas fa-shield-alt"></i><span>Halal Certified</span><small>Trusted & Verified</small></div>
+                    <div class="trust-item"><i class="fas fa-truck"></i><span>Fast Shipping</span><small>Across Canada</small></div>
+                    <div class="trust-item"><i class="fas fa-handshake"></i><span>Wholesale Available</span><small>Bulk Orders Welcome</small></div>
+                    <div class="trust-item"><i class="fas fa-smile"></i><span>100% Satisfaction</span><small>Quality Guaranteed</small></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video -->
+        <section id="video-section" class="section video-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Watch Our Story</span>
+                    <h2>See the <span class="highlight">Difference</span></h2>
+                    <p>Experience the journey of Hawiad Green Tea from the lush gardens of Vietnam to your cup.</p>
+                </div>
+                <div class="video-wrapper">
+                    <video controls poster="https://www.haiwad.com/wp-content/uploads/2022/02/Haiwad-Tea-Adv.jpeg">
+                        <source src="https://www.haiwad.com/wp-content/uploads/2022/01/Haiwad-Green-Tea.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Highlights -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Our Signature Products</span>
+                    <h2>Premium <span class="highlight">Quality</span> You Can Trust</h2>
+                    <p>Sourced from the best origins, crafted with care, and delivered to your door.</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://www.haiwad.com/wp-content/uploads/2021/05/Bottle-2.png" alt="Hawiad Pure Green Tea" />
+                            <span class="badge-sale">Bestseller</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Hawiad Pure Green Tea</h3>
+                            <p class="product-desc">Product of Vietnam. A refreshing and healthy beverage packed with antioxidants.</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 250gr x 48 bottles/case</li>
+                                <li><i class="fas fa-check"></i> 500gr x 24 bottles/case</li>
+                                <li><i class="fas fa-check"></i> Rich in Vitamins</li>
+                            </ul>
+                            <a href="#" onclick="showPage('products')" class="btn btn-secondary" style="width:100%; justify-content:center;">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://www.haiwad.com/wp-content/uploads/2023/11/Haiwad-Can-01.png" alt="Ginseng Energy Drink" />
+                            <span class="badge-sale" style="background:var(--secondary);">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Ginseng Energy Drink</h3>
+                            <p class="product-desc">Halal energy drink that provides a natural boost of stamina and vitality.</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Excellent source of energy</li>
+                                <li><i class="fas fa-check"></i> Great tasting flavor</li>
+                                <li><i class="fas fa-check"></i> Halal Certified</li>
+                            </ul>
+                            <a href="#" onclick="showPage('products')" class="btn btn-secondary" style="width:100%; justify-content:center;">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission -->
+        <section class="section vision-mission">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Our Purpose</span>
+                    <h2>Vision &amp; <span class="highlight">Mission</span></h2>
+                    <p>Driven by quality, guided by tradition.</p>
+                </div>
+                <div class="vm-grid">
+                    <div class="vm-card">
+                        <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To be nationally recognized as a leading ethnic food distributor where customers will feel the taste of the food products they grew up with based on their ethical backgrounds.</p>
+                    </div>
+                    <div class="vm-card">
+                        <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To spread the best quality ethnic food products all throughout Canada so that everyone can enjoy a wide variety of authentic ethnic foods.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge" style="background:rgba(255,255,255,0.15); color:var(--secondary);">Testimonials</span>
+                    <h2>What Our <span class="highlight">Customers Say</span></h2>
+                    <p>Real reviews from real customers who love our products.</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote>"The best green tea I've ever had! The flavor is authentic and refreshing. I've recommended it to all my friends."</blockquote>
+                        <div class="author">
+                            <div class="avatar">SM</div>
+                            <div class="info"><div class="name">Sarah M.</div><div class="role">Retail Customer, Toronto</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote>"The Ginseng Energy drink is a game-changer! We stock it in our store and it's a huge hit with our customers."</blockquote>
+                        <div class="author">
+                            <div class="avatar">AK</div>
+                            <div class="info"><div class="name">Ahmed K.</div><div class="role">Store Owner, Vancouver</div></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote>"Hawiad Products has transformed our beverage selection. Quality products, reliable shipping, and excellent customer service."</blockquote>
+                        <div class="author">
+                            <div class="avatar">JL</div>
+                            <div class="info"><div class="name">Jennifer L.</div><div class="role">Wholesale Buyer, Calgary</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="page-about" class="page">
+        <section class="page-hero">
+            <div class="container">
+                <h1>About <span class="highlight">Hawiad</span></h1>
+                <p>Bringing the world's best flavors to your table.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>HAWIAD PRODUCTS CANADA INC. is a registered importation and Distribution Company established in 2021, importing the best quality ethnic food products from around the world. We are committed to providing our customers with authentic, great-tasting products that remind them of home.</p>
+                        <p>We thoroughly check the quality of our goods, working only with reliable suppliers/manufacturers around the world so that you only receive the best quality product. The interests of our customers are always top priority for us, so we hope you will enjoy our products as much as we enjoy making them available to you.</p>
+                        <h3>Why Choose Us?</h3>
+                        <ul class="styled-list">
+                            <li><i class="fas fa-check-circle"></i> Premium Quality Products</li>
+                            <li><i class="fas fa-check-circle"></i> Authentic Ethnic Flavors</li>
+                            <li><i class="fas fa-check-circle"></i> Halal Certified Options</li>
+                            <li><i class="fas fa-check-circle"></i> Reliable & Trusted Supplier</li>
+                            <li><i class="fas fa-check-circle"></i> Excellent Customer Service</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://www.haiwad.com/wp-content/uploads/2022/02/100-pure-badge.png" alt="100% Pure Badge" />
+                        <img src="https://www.haiwad.com/wp-content/uploads/2022/02/Haiwad-Logo.png" alt="Hawiad Logo" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section vision-mission">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge">Our Core Values</span>
+                    <h2>Vision &amp; <span class="highlight">Mission</span></h2>
+                </div>
+                <div class="vm-grid">
+                    <div class="vm-card">
+                        <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To be nationally recognized as a leading ethnic food distributor where customers will feel the taste of the food products they grew up with based on their ethical backgrounds.</p>
+                    </div>
+                    <div class="vm-card">
+                        <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>To spread the best quality ethnic food products all throughout Canada so that everyone can enjoy a wide variety of authentic ethnic foods.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PRODUCTS PAGE -->
+    <div id="page-products" class="page">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our <span class="highlight">Products</span></h1>
+                <p>Quality you can taste, origins you can trust.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="product-detail-card">
+                    <div class="product-detail-img">
+                        <img src="https://www.haiwad.com/wp-content/uploads/2021/05/Bottle-2.png" alt="Hawiad Pure Green Tea" />
+                    </div>
+                    <div class="product-detail-info">
+                        <h2>Hawiad Pure Green Tea</h2>
+                        <p class="product-origin"><i class="fas fa-map-pin"></i> Product of Vietnam</p>
+                        <p>Experience the authentic taste of pure green tea. Hawiad Green Tea is carefully selected and packaged to preserve its natural flavor and health benefits. It's an excellent source of vitamins B2, B3, B5, B6, and B12, providing a healthy and refreshing boost.</p>
+                        <div class="product-specs">
+                            <h4>📦 Packaging Options</h4>
+                            <ul>
+                                <li><strong>250gr</strong> x 48 bottles per case (12kg / 26.46lbs)</li>
+                                <li><strong>500gr</strong> x 24 bottles per case (12kg / 26.46lbs)</li>
+                            </ul>
+                        </div>
+                        <div class="product-benefits">
+                            <h4>✨ Key Benefits</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Excellent source of vitamins B2, B3, B5, B6, and B12</li>
+                                <li><i class="fas fa-check-circle"></i> Special tasting flavor</li>
+                                <li><i class="fas fa-check-circle"></i> Refreshment, stamina, and energy (tonic)</li>
+                                <li><i class="fas fa-check-circle"></i> Best when chilled</li>
+                            </ul>
+                        </div>
+                        <a href="#" onclick="showPage('contact')" class="btn btn-primary">Inquire About This Product</a>
+                    </div>
+                </div>
+                <hr class="section-divider" />
+                <div class="product-detail-card">
+                    <div class="product-detail-img">
+                        <img src="https://www.haiwad.com/wp-content/uploads/2023/11/Haiwad-Can-01.png" alt="Ginseng Energy Drink" />
+                    </div>
+                    <div class="product-detail-info">
+                        <h2>Ginseng Energy Drink</h2>
+                        <p class="product-origin"><i class="fas fa-certificate"></i> Halal Certified</p>
+                        <p>Our Ginseng Energy Drink is the perfect blend of traditional herbal wisdom and modern refreshment. Formulated to provide a natural energy boost, it's ideal for those who need an extra edge in their day. Enjoy the revitalizing power of ginseng in a great-tasting, Halal-certified beverage.</p>
+                        <div class="product-specs">
+                            <h4>🌟 Product Highlights</h4>
+                            <ul>
+                                <li>Halal certified</li>
+                                <li>Excellent source of energy and stamina</li>
+                                <li>Unique, great-tasting flavor</li>
+                            </ul>
+                        </div>
+                        <a href="#" onclick="showPage('contact')" class="btn btn-primary">Inquire About This Product</a>
+                    </div>
+                </div>
+                <hr class="section-divider" />
+                <div class="product-detail-card">
+                    <div class="product-detail-img">
+                        <img src="https://www.haiwad.com/wp-content/uploads/2021/05/Descriptions.png" alt="Coming Soon" style="max-height:200px;" />
+                    </div>
+                    <div class="product-detail-info">
+                        <h2>New Product Coming Soon!</h2>
+                        <p class="product-origin"><i class="fas fa-clock"></i> Launching Soon</p>
+                        <p>We're constantly expanding our product line to bring you the best ethnic foods from around the world. Stay tuned for exciting new arrivals!</p>
+                        <div class="product-benefits">
+                            <h4>🔔 Stay Updated</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Subscribe to our newsletter</li>
+                                <li><i class="fas fa-check-circle"></i> Follow us on social media</li>
+                                <li><i class="fas fa-check-circle"></i> Check back for updates</li>
+                            </ul>
+                        </div>
+                        <a href="#" onclick="showPage('contact')" class="btn btn-secondary">Contact Us for Pre-Orders</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="page-contact" class="page">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Get in <span class="highlight">Touch</span></h1>
+                <p>We'd love to hear from you. Reach out for any inquiries.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <p>Our team is ready to assist you with your questions about our products, wholesale inquiries, or any other feedback.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Address</h4>
+                                    <p>35 Elinor Ave, Toronto, ON, M1R 3H1</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+16476193385" style="font-weight:700; color:var(--primary);">+1 (647) 619-3385</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:Haiwadproductscanada@gmail.com">Haiwadproductscanada@gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <h4>Website</h4>
+                                    <p>www.haiwadcanada.ca</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links" style="display:flex; gap:1rem; margin-top:1rem;">
+                            <a href="#" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:var(--light-gray); color:var(--primary); transition:var(--transition);"><i class="fab fa-twitter"></i></a>
+                            <a href="#" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:var(--light-gray); color:var(--primary); transition:var(--transition);"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:var(--light-gray); color:var(--primary); transition:var(--transition);"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" style="display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:var(--light-gray); color:var(--primary); transition:var(--transition);"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <h2>Send a Message</h2>
+                        <form action="#" method="POST" class="contact-form" onsubmit="event.preventDefault(); alert('✅ Thank you! Your message has been sent successfully. Our team will get back to you within 24 hours.');">
+                            <div class="form-group">
+                                <label for="name">Your Name <span style="color:var(--danger);">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span style="color:var(--danger);">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Select a subject...</option>
+                                    <option value="wholesale">Wholesale Inquiry</option>
+                                    <option value="retail">Retail Purchase</option>
+                                    <option value="sample">Request Sample</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message <span style="color:var(--danger);">*</span></label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+                                <div class="hint">We typically respond within 24 hours.</div>
+                            </div>
+                            <button type="submit" class="btn btn-gold btn-block btn-large">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                            <div style="text-align:center; margin-top:0.8rem; font-size:0.8rem; color:var(--medium-gray);">
+                                <i class="fas fa-lock"></i> Your information is safe with us.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</main>
+
+<!-- ===== FLOATING CONTACT BAR ===== -->
+<div class="floating-contact-bar">
+    <div class="contact-item hide-mobile">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:+16476193385">+1 (647) 619-3385</a>
+    </div>
+    <div class="contact-item hide-mobile">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:Haiwadproductscanada@gmail.com">Haiwadproductscanada@gmail.com</a>
+    </div>
+    <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span style="font-size:0.8rem;">35 Elinor Ave, Toronto, ON</span>
+    </div>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <a href="tel:+16476193385" class="btn btn-phone" style="padding:0.4rem 1.2rem; font-size:0.8rem;">
+            <i class="fas fa-phone"></i> Call Now
+        </a>
+        <a href="#" onclick="showPage('contact')" class="btn btn-secondary" style="padding:0.4rem 1.2rem; font-size:0.8rem;">
+            <i class="fas fa-envelope"></i> Contact
+        </a>
+    </div>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'});">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ===== EXIT POPUP ===== -->
+<div class="exit-popup-overlay" id="exitPopup">
+    <div class="exit-popup">
+        <button class="close-popup" onclick="closeExitPopup()"><i class="fas fa-times"></i></button>
+        <div class="popup-icon"><i class="fas fa-gift"></i></div>
+        <h3>Wait! Don't Leave Yet!</h3>
+        <p>Get a <strong>FREE SAMPLE</strong> of our premium Green Tea or Ginseng Energy Drink with your first wholesale order.</p>
+        <a href="#" onclick="showPage('contact'); closeExitPopup();" class="btn btn-gold">Yes, I'm Interested!</a>
+        <br><br>
+        <a href="#" onclick="closeExitPopup();" style="font-size:0.85rem; color:var(--medium-gray);">No thanks, I'll just browse</a>
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h4>Hawiad Products Canada Inc.</h4>
+                <p>We are dedicated to importing and distributing the finest ethnic food products, ensuring the highest quality and authenticity. Your trusted partner for premium Green Tea and Ginseng Energy drinks.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a onclick="showPage('about')">About Us</a></li>
+                    <li><a onclick="showPage('products')">Our Products</a></li>
+                    <li><a onclick="showPage('contact')">Contact</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Wholesale Inquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 35 Elinor Ave, Toronto, ON, M1R 3H1</p>
+                <p><i class="fas fa-phone-alt"></i> +1 (647) 619-3385</p>
+                <p><i class="fas fa-envelope"></i> Haiwadproductscanada@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM EST</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2020-2026 Hawiad Products Canada Inc. | All Rights Reserved | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // PAGE ROUTING
+    function showPage(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        const target = document.getElementById('page-' + pageId);
+        if (target) target.classList.add('active');
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.classList.remove('active');
+            if (link.dataset.page === pageId) link.classList.add('active');
+        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (pageId !== 'home') window.location.hash = pageId;
+        else window.location.hash = '';
+    }
+
+    function handleHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash && ['about','products','contact'].includes(hash)) showPage(hash);
+        else showPage('home');
+    }
+    window.addEventListener('hashchange', handleHash);
+    window.addEventListener('DOMContentLoaded', handleHash);
+
+    // BACK TO TOP
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTop');
+        if (window.scrollY > 400) btn.classList.add('visible');
+        else btn.classList.remove('visible');
+    });
+
+    // EXIT INTENT
+    let exitPopupShown = false;
+    document.addEventListener('mouseleave', function(e) {
+        if (e.clientY < 0 && !exitPopupShown) {
+            exitPopupShown = true;
+            document.getElementById('exitPopup').classList.add('active');
+        }
+    });
+    function closeExitPopup() {
+        document.getElementById('exitPopup').classList.remove('active');
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeExitPopup();
+    });
+    document.getElementById('exitPopup').addEventListener('click', function(e) {
+        if (e.target === this) closeExitPopup();
+    });
+
+    // SCROLL ANIMATIONS
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.product-card, .vm-card, .testimonial-card, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    });
+
+    // FORM SUBMISSION
+    document.querySelectorAll('.contact-form').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Thank you! Your message has been sent successfully. Our team will get back to you within 24 hours.');
+            this.reset();
+        });
+    });
+
+    // CONSOLE BRANDING
+    console.log('%c🍵 Hawiad Products Canada', 'font-size:24px; font-weight:bold; color:#003d55;');
+    console.log('%cPremium Green Tea & Ginseng Energy | www.haiwadcanada.ca', 'font-size:14px; color:#c89d3c;');
+    console.log('%c📞 +1 (647) 619-3385 | 📧 Haiwadproductscanada@gmail.com', 'font-size:12px; color:#666;');
+</script>
+
+</body>
+</html>
